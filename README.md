@@ -8,7 +8,7 @@
 
 ## Getting Started
 
-You can find an example Skyrim Platform plugin with documentation on where to get started here: https://github.com/skyrim-platform/example-plugin
+You can find an example Skyrim Platform plugin with documentation on how to get started here: https://github.com/skyrim-platform/example-plugin
 
 ## License
 
