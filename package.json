@@ -1,6 +1,6 @@
 {
     "name": "@skyrim-platform/skyrim-platform",
-    "version": "2.3.0",
+    "version": "2.3.1",
     "description": "(Unofficial) TypeScript type definitions for Skyrim Platform",
     "main": "",
     "types": "index.d.ts",
@@ -22,5 +22,5 @@
         "typescript": "^4.5.4"
     },
     "files": ["index.d.ts"],
-    "keywords": ["skyrim", "skryim platform"]
+    "keywords": ["skyrim", "skyrim platform"]
 }
