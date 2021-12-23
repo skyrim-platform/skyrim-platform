@@ -5,8 +5,14 @@
     "main": "",
     "types": "index.d.ts",
     "license": "GPLV3",
-    "homepage": "https://github.com/skyrim-multiplayer/skymp",
-    "author": "Leonid Pospelov <pospelovlm@yandex.ru>",
+    "homepage": "https://github.com/skyrim-platform/skyrim-platform",
+    "contributors": [
+        {
+            "name": "Leonid Pospelov",
+            "email": "pospelovlm@yandex.ru",
+            "url": "https://github.com/Pospelove"
+        }
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/skyrim-platform/skyrim-platform.git"
@@ -15,5 +21,6 @@
         "tsc": "^2.0.3",
         "typescript": "^4.5.4"
     },
-    "files": ["index.d.ts"]
+    "files": ["index.d.ts"],
+    "keywords": ["skyrim", "skryim platform"]
 }
