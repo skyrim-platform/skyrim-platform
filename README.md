@@ -1,6 +1,6 @@
 ## `@skyrim-platform/skyrim-platform`
 
-(Unofficial) TypeScript type definitions for Skyrim Platform (_released with permission_)
+TypeScript type definitions for Skyrim Platform (_released with permission_)
 
 - Skyrim Platform on GitHub: https://github.com/skyrim-multiplayer/skymp
 - Skyrim Platform on Nexus: https://www.nexusmods.com/skyrimspecialedition/mods/54909
@@ -8,7 +8,7 @@
 
 ## Getting Started
 
-You can find an example Skyrim Platform plugin with documentation on how to get started here: https://github.com/skyrim-platform/example-plugin
+You can find an example Skyrim Platform plugin with documentation on how to get started here: https://github.com/skyrim-multiplayer/skymp/tree/main/skyrim-platform/tools/plugin-example
 
 ## License
 

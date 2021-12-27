@@ -1,7 +1,7 @@
 {
     "name": "@skyrim-platform/skyrim-platform",
-    "version": "2.3.1",
-    "description": "(Unofficial) TypeScript type definitions for Skyrim Platform",
+    "version": "2.3.2",
+    "description": "TypeScript type definitions for Skyrim Platform",
     "main": "",
     "types": "index.d.ts",
     "license": "GPLV3",
