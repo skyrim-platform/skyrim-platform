@@ -1,3 +1,4 @@
+
 /* eslint-disable @typescript-eslint/adjacent-overload-signatures */
 /* eslint-disable @typescript-eslint/no-namespace */
 // Generated automatically. Do not edit.
@@ -9,7 +10,6 @@ export type PapyrusValue = PapyrusObject | number | string | boolean | null | Pa
 export declare function printConsole(...arguments: unknown[]): void;
 export declare function writeLogs(pluginName: string, ...arguments: unknown[]): void;
 export declare function setPrintConsolePrefixesEnabled(enabled: boolean): void;
-export declare function writeScript(scriptName: string, src: string): void;
 export declare function callNative(className: string, functionName: string, self?: PapyrusObject, ...args: PapyrusValue[]): PapyrusValue;
 export declare function getJsMemoryUsage(): number;
 export declare function getPluginSourceCode(pluginName: string): string;
@@ -69,12 +69,19 @@ export declare let mpClientPlugin: MpClientPlugin;
 
 export interface Browser {
   setVisible(visible: boolean): void;
+  isVisible(): boolean;
   setFocused(focused: boolean): void;
+  isFocused(): boolean;
   loadUrl(url: string): void;
   getToken(): string;
   executeJavaScript(src: string): void;
 }
 export declare let browser: Browser;
+
+export interface Win32 {
+  loadUrl(url: string): void;
+}
+export declare let win32: Win32;
 
 export interface ExtraData {
   type: 'Health' | 'Count' | 'Enchantment' | 'Charge' | 'TextDisplayData' | 'Soul' | 'Poison' | 'Worn' | 'WornLeft';
@@ -257,6 +264,11 @@ export interface ConsoleMessageEvent {
     message: string
 }
 
+export interface SpellCastEvent {
+    caster: ObjectReference,
+    spell: Spell
+}
+
 export declare function on(eventName: 'activate', callback: (event: ActivateEvent) => void): void;
 export declare function once(eventName: 'activate', callback: (event: ActivateEvent) => void): void;
 
@@ -337,6 +349,9 @@ export declare function once(eventName: 'browserMessage', callback: (event: Brow
 
 export declare function on(eventName: 'consoleMessage', callback: (event: ConsoleMessageEvent) => void): void;
 export declare function once(eventName: 'consoleMessage', callback: (event: ConsoleMessageEvent) => void): void;
+
+export declare function on(eventName: 'spellCast', callback: (event: SpellCastEvent) => void): void;
+export declare function once(eventName: 'spellCast', callback: (event: SpellCastEvent) => void): void;
 
 
 declare class ConsoleComand {
