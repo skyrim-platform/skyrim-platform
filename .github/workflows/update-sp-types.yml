@@ -1,0 +1,23 @@
+name: Update SP Types
+on:
+  repository_dispatch:
+    types: [update-types]
+jobs:
+  updateType:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Update files
+        run: |
+          sed -i "s/\"version\".*,/\"version\": \"${{ github.event.client_payload.version }}\",/g" package.json
+          CURLARGS="-f -s -S -k"
+          curl $CURLARGS ${{ github.event.client_payload.url }} > index.d.ts
+          echo "finish update data"
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v8
+        with:
+          author_name: Update Workflow
+          message: "Upgrade to ${{ github.event.client_payload.version }}"
