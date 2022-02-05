@@ -3,7 +3,7 @@ on:
   repository_dispatch:
     types: [update-types]
 jobs:
-  updateType:
+  updatetype:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,3 +21,17 @@ jobs:
         with:
           author_name: Update Workflow
           message: "Upgrade to ${{ github.event.client_payload.version }}"
+          
+  publish:
+    needs: [updatetype]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - run: npm install
+      - run: npm test
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_PUBLISH_TOKEN }}
