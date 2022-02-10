@@ -12,6 +12,6 @@ You can find an example Skyrim Platform plugin with documentation on how to get 
 
 ## License
 
-Skyrim Platform is released under the GNU General Public License v3.0
+Your plugin is your own software and can be licensed however you like even if it uses Skyrim Platform types!
 
-The included TypeScript type definitions here are released under the same license.
+Skyrim Platform itself is distributed under the GNU General Public License v3.0.
