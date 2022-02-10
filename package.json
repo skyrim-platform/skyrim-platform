@@ -1,6 +1,6 @@
 {
     "name": "@skyrim-platform/skyrim-platform",
-    "version": "2.4.0",
+    "version": "2.5.0",
     "description": "TypeScript type definitions for Skyrim Platform",
     "main": "",
     "types": "index.d.ts",
