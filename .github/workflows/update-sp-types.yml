@@ -22,11 +22,7 @@ jobs:
           author_name: Update Workflow
           message: "Upgrade to ${{ github.event.client_payload.version }}"
           
-  publish:
-    needs: [updatetype]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+      - name: Publish to NPM
       - uses: actions/setup-node@v2
         with:
           node-version: 16
@@ -34,3 +30,4 @@ jobs:
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_PUBLISH_TOKEN }}
+          
